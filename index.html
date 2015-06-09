@@ -30,8 +30,7 @@
 			  </nav>
 			  
 			  </div>
-			  <div class="divider">
-			</div>
+			  <div class="divider"></div>
 			</div>
 			<div class="row">
 			<div class="col s9">	
@@ -69,8 +68,8 @@
 			  </div>
 			</div>
 			<div class="col s3">
-			
-				<div class="card-panel teal">
+			    <div class="flow-text white-text center-align teal lighten-2 z-depth-3">Different Names</div>
+				<div class="card-panel teal ">
 				  <span class="white-text">I am a very simple card. I am good at containing small bits of information.
 				  I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
 				  </span>
@@ -81,17 +80,19 @@
 				<div class="row">
 				  <div class="col s3">
 				  
-				    <img class="materialboxed" data-caption="A picture of some deer and tons of trees" width="200" src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg">
+				    <img class="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees" src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg">
+			  <h5 class="center"><a href="https://stamplay.com/" target="_blank">Stamplay</a></h5>
+				  </div>
+				  <div class="col s3">
+				  
+				    <img class="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees" src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg">
+			  <h5 class="center"><a href="https://stamplay.com/" target="_blank">Stamplay</a></h5>
 			  
 				  </div>
 				  <div class="col s3">
 				  
-				    <img class="materialboxed" data-caption="A picture of some deer and tons of trees" width="200" src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg">
-			  
-				  </div>
-				  <div class="col s3">
-				  
-				    <img class="materialboxed" data-caption="A picture of some deer and tons of trees" width="200" src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg">
+				    <img class="materialboxed z-depth-3 responsive-img" data-caption="A picture of some deer and tons of trees" src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg">
+			  <h5 class="center"><a href="https://stamplay.com/" target="_blank">Stamplay</a></h5>
 			  
 				  </div>
 			  <div class="col s3">
@@ -133,9 +134,19 @@
             
 			  </div>
 			</div>
+			<div class="divider"></div>
 			<div class="row">
-			  <div class="col s9">This div is 6-columns wide</div>
-			  <div class="col s3">This div is 6-columns wide</div>
+			  <div class="col s4">
+				  
+				    
+       <div class="video-container no-controls">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3NQRhE772b0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+			  
+				  </div>
+			  <div class="col s3">sdfsdf</div>
+			  <div class="col s5"><div id="piechart_3d" style="width: 100%;"></div></div>
 			</div>
 			 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
 				<a class="btn-floating btn-large red">
@@ -184,6 +195,27 @@
 		  $('.slider').slider({full_width: false});
 		  });
 	  </script>
+	  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Sleep',     15],
+          ['Eat',      5],
+          ['Play',  4]
+        ]);
+
+        var options = {
+          title: 'Daily Activities',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
     </body>
   </html>
         
